@@ -6,3 +6,5 @@ execute "append to log" do
     # echo '*********'  >> #{node['log-file']['path']}
   EOF
 end
+
+package 'vim-enhanced'

@@ -25,5 +25,7 @@ Vagrant.configure("2") do |config|
     # This cookbook depends on the filesystem cookbook which depends on lvm
     chef.add_recipe "centos-as-code::default"
     chef.add_recipe "centos-as-code::tz"
+    chef.add_recipe "centos-as-code::install-gradle"
+    chef.add_recipe "centos-as-code::devops-apps"
   end
 end
