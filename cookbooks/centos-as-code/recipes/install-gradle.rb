@@ -64,14 +64,15 @@ end
 #   recursive true
 # end
 
+#####  Error Here on full run #####
 # This appears to checkout the 'example-solution' branch to a branch named deploy
-git '/home/vagrant/cicd-pipeline-train-schedule-gradle' do
-  repository 'https://github.com/coateds/cicd-pipeline-train-schedule-gradle.git'
-  action :checkout
-  user 'vagrant'
-  group 'vagrant'
-  revision 'example-solution'
-end
+# git '/home/vagrant/cicd-pipeline-train-schedule-gradle' do
+#   repository 'https://github.com/coateds/cicd-pipeline-train-schedule-gradle.git'
+#   action :checkout
+#   user 'vagrant'
+#   group 'vagrant'
+#   revision 'example-solution'
+# end
 
 # In my-project `gradle init` to initialize
 # must logoff/logon for path
