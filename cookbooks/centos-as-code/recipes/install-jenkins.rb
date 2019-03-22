@@ -31,25 +31,25 @@ gpgcheck=1
 "
 end
 
-package 'jenkins-2.121.1'
-
-execute 'restore backup' do
-  command 'cp -rp /vagrant/jenkins-backup/* /var/lib/jenkins'
-end
-
-## install jenkins
-## and notify the restore backup job to run
-#package 'jenkins-2.121.1' do
-#  notifies :run, 'execute[restore backup]'
-#end
+#package 'jenkins-2.121.1'
 #
-## This MUST be made idempotent...
-## or even better, made to run only as notified by jenkins package installation
-## else it could overwrite config changes made after install
 #execute 'restore backup' do
 #  command 'cp -rp /vagrant/jenkins-backup/* /var/lib/jenkins'
-#  action :nothing
 #end
+
+# install jenkins
+# and notify the restore backup job to run
+package 'jenkins-2.121.1' do
+  notifies :run, 'execute[restore backup]'
+end
+
+# This MUST be made idempotent...
+# or even better, made to run only as notified by jenkins package installation
+# else it could overwrite config changes made after install
+execute 'restore backup' do
+  command 'cp -rp /vagrant/jenkins-backup/* /var/lib/jenkins'
+  action :nothing
+end
 
 service 'jenkins' do
   action [ :enable, :start ]
