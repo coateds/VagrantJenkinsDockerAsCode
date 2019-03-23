@@ -47,7 +47,10 @@ end
 # or even better, made to run only as notified by jenkins package installation
 # else it could overwrite config changes made after install
 execute 'restore backup' do
-  command 'cp -rp /vagrant/jenkins-backup/* /var/lib/jenkins'
+  command <<-EOF
+    cp -rp /vagrant/jenkins-backup/* /var/lib/jenkins
+    chown -R jenkins:jenkins /var/lib/jenkins
+  EOF
   action :nothing
 end
 
