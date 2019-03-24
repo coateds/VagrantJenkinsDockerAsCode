@@ -3,7 +3,7 @@
   <fullName>Dave Coate</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwyyPFrm1nnD41EAO4FtLmZ6UqScM9YjnB6HQ+qQABPRcs3T6zbQ3vRm7Qr99aPlSqd5xTWhysJO7Jk+sbVPX7Ew==}</apiToken>
+      <apiToken>{AQAAABAAAABwp9rqa1MQBPe0so1Tzq+EwJ1uGYcyaOz3VYYDM+JBJg8swHXhl8dYWKVD0e4relU0+LeYsjUGpyNz+oIo9F7oSI6GG7z3pHJjznagVM8fHoN08YypE5dwgJTD1PFEdGtcokJDsb/LwSynqdHN87uLafT77YohugCpz0al6ddiTgU=}</apiToken>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
@@ -34,5 +34,11 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
       <emailAddress>coateds@outlook.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1553313323696</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>

@@ -43,6 +43,10 @@ package 'jenkins-2.121.1' do
   notifies :run, 'execute[restore backup]'
 end
 
+directory '/apps/jenkins_backup' do
+  recursive true
+end
+
 # This MUST be made idempotent...
 # or even better, made to run only as notified by jenkins package installation
 # else it could overwrite config changes made after install
@@ -50,6 +54,7 @@ execute 'restore backup' do
   command <<-EOF
     cp -rp /vagrant/jenkins-backup/* /var/lib/jenkins
     chown -R jenkins:jenkins /var/lib/jenkins
+    chown -R jenkins:jenkins /apps/jenkins_backup
   EOF
   action :nothing
 end

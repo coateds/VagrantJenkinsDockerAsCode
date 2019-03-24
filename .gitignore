@@ -2,4 +2,3 @@
 *.vmdk
 nodes/
 chef_provision.log
-train-schedule/
