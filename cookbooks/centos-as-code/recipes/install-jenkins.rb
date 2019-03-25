@@ -39,16 +39,17 @@ end
 
 # install jenkins
 # and notify the restore backup job to run
-package 'jenkins-2.121.1' do
-  notifies :run, 'execute[restore backup]'
+# package 'jenkins-2.121.1'
+package 'jenkins' do
+  # notifies :run, 'execute[restore backup]'
 end
 
+# create the thin backup target directory
 directory '/apps/jenkins_backup' do
   recursive true
 end
 
-# This MUST be made idempotent...
-# or even better, made to run only as notified by jenkins package installation
+# run only as notified by jenkins package installation
 # else it could overwrite config changes made after install
 execute 'restore backup' do
   command <<-EOF
