@@ -41,7 +41,7 @@ end
 # and notify the restore backup job to run
 # package 'jenkins-2.121.1'
 package 'jenkins' do
-  # notifies :run, 'execute[restore backup]'
+  notifies :run, 'execute[restore backup]'
 end
 
 # create the thin backup target directory

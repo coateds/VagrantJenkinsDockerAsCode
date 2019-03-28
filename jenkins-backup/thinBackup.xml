@@ -3,14 +3,14 @@
   <fullBackupSchedule></fullBackupSchedule>
   <diffBackupSchedule></diffBackupSchedule>
   <backupPath>/apps/jenkins_backup</backupPath>
-  <nrMaxStoredFull>3</nrMaxStoredFull>
-  <excludedFilesRegex>^.*\.(log)$</excludedFilesRegex>
-  <waitForIdle>false</waitForIdle>
+  <nrMaxStoredFull>-1</nrMaxStoredFull>
+  <excludedFilesRegex></excludedFilesRegex>
+  <waitForIdle>true</waitForIdle>
   <forceQuietModeTimeout>120</forceQuietModeTimeout>
   <cleanupDiff>false</cleanupDiff>
-  <moveOldBackupsToZipFile>true</moveOldBackupsToZipFile>
-  <backupBuildResults>false</backupBuildResults>
-  <backupBuildArchive>false</backupBuildArchive>
+  <moveOldBackupsToZipFile>false</moveOldBackupsToZipFile>
+  <backupBuildResults>true</backupBuildResults>
+  <backupBuildArchive>true</backupBuildArchive>
   <backupPluginArchives>true</backupPluginArchives>
   <backupUserContents>true</backupUserContents>
   <backupAdditionalFiles>false</backupAdditionalFiles>
