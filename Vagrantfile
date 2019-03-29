@@ -24,11 +24,12 @@ Vagrant.configure("2") do |config|
     chef.roles_path = "roles"
      
     # This cookbook depends on the filesystem cookbook which depends on lvm
-    chef.add_recipe "centos-as-code::default"
-    chef.add_recipe "centos-as-code::system-updates"
-    chef.add_recipe "centos-as-code::tz"
-    # chef.add_recipe "centos-as-code::install-gradle"
-    chef.add_recipe "centos-as-code::devops-apps"
-    chef.add_recipe "centos-as-code::install-jenkins"
+    chef.add_recipe "jd-as-code::default"
+    chef.add_recipe "jd-as-code::hosts-file"
+    chef.add_recipe "jd-as-code::system-updates"
+    chef.add_recipe "jd-as-code::tz"
+    # chef.add_recipe "jd-as-code::install-gradle"
+    chef.add_recipe "jd-as-code::devops-apps"
+    chef.add_recipe "jd-as-code::install-jenkins"
   end
 end
