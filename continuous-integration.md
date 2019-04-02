@@ -118,7 +118,17 @@ Secondary source??
 Questions
 What adjustments, if any, are needed in the /etc/hosts
 
-### Detritus
+## Other resources to look at (and try) carefully
+* https://docs.gitlab.com/ee/integration/jenkins.html  (Enterprise Edition)
+* GitLab Enterprise Edition contains advanced Jenkins support
+* https://stackoverflow.com/questions/37429453/gitlab-ci-vs-jenkins
+* Gitlab-ci may be a better solution than Jenkins
+  * https://solidgeargroup.com/gitlab_countinuous_integration_intro
+  * https://about.gitlab.com/devops-tools/jenkins-vs-gitlab.html
+* https://www.tutorialspoint.com/gitlab/index.htm
+* https://gitpitch.com/atsaloli/cicd?grs=gitlab#/1
+
+## Detritus
 ### In GitHub
 * My Settings
 * Developer Settings
